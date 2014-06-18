@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/irongrip_repeating"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:tileMode="repeat"
+    tools:context=".NumberActivity" >
+
+    <TextView
+        android:id="@+id/txtNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="Press &quot;New Number&quot; to begin"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffffffff"
+        android:textSize="20dp" />
+
+<CheckBox
+    android:id="@+id/checkBoxSpeech"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:button="@drawable/custom_checkbox_design"
+    android:textColor="#ffffffff"
+    android:text="  Slow Speech Rate" />
+
+<Button
+    android:id="@+id/btnReadNumber"
+    style="@style/btnStyleBreakerBay"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentRight="true"
+
+    android:layout_marginTop="80dp"
+    android:text="Read Number" />
+
+<Spinner
+    android:id="@+id/spinner1"
+    style="@style/btnStyleBreakerBay"
+    android:layout_width="130dp"
+    android:layout_height="50dp"
+    android:layout_above="@+id/checkBoxSpeech"
+    android:layout_alignParentRight="true"
+    android:entries="@array/number_arrays" />
+
+<EditText
+    android:id="@+id/etNumber"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/spinner1"
+    android:layout_alignLeft="@+id/btnNewNumber"
+    android:background="#ffffff"
+    android:ems="2"
+    android:inputType="number"
+    android:text="6" >
+
+    <requestFocus />
+</EditText>
+
+<Button
+    android:id="@+id/btnNewNumber"
+    style="@style/btnStyleBreakerBay"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/etNumber"
+    android:layout_alignParentLeft="true"
+    android:layout_alignRight="@+id/spinner1"
+    android:layout_marginBottom="18dp"
+    android:text="New Number" />
+
+<EditText
+    android:id="@+id/etEnterNumber"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/btnCheckNumber"
+    android:layout_alignLeft="@+id/btnReadNumber"
+    android:layout_alignTop="@+id/btnCheckNumber"
+    android:background="#ffffff"
+    android:ems="10"
+    android:inputType="number" />
+
+<Button
+    android:id="@+id/btnCheckNumber"
+    style="@style/btnStyleBreakerBay"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignRight="@+id/btnReadNumber"
+    android:layout_below="@+id/btnReadNumber"
+    android:layout_marginTop="27dp"
+    android:text="Check" />
+
+<TextView
+    android:id="@+id/textView1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_alignBottom="@+id/spinner1"
+    android:layout_alignParentLeft="true"
+    android:layout_alignTop="@+id/spinner1"
+    android:layout_toLeftOf="@+id/spinner1"
+    android:text="     Option:"
+    android:textColor="#ffffff"
+    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+<TextView
+    android:id="@+id/textView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignRight="@+id/spinner1"
+    android:layout_alignTop="@+id/etNumber"
+    android:layout_toRightOf="@+id/etNumber"
+    android:text="  Number of digits"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:textColor="#ffffff" />
+
+</RelativeLayout>
